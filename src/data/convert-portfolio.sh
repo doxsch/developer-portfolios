@@ -8,7 +8,7 @@ IFS=$'\n'
 names=($(grep '*' portfolios.md | awk -F"[" '{print $2}' | awk -F"]" '{print $1}'))
 
 # find urls
-urls=($(grep '*' portfolios.md | grep -o '(.*)'| sed -r 's/\((.*)\)/\1/'))
+urls=($(grep '*' portfolios.md | awk -F"(" '{print $2}' | awk -F")" '{print $1}'))
 
 IFS=$IFS_backup
 
