@@ -20,6 +20,7 @@ const DeveloperCard = ({name, url, image}) => {
                         <Img
                             fluid={image.fluid}
                             alt={name}
+                            fadeIn={true}
 
                         /> :
                         <DefaultImage/>
