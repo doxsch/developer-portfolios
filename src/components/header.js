@@ -6,7 +6,7 @@ import logo from "./logo.svg"
 const Header = ({siteTitle}) => (
     <header
         style={{
-            marginBottom: `3rem`,
+            marginBottom: `1rem`,
         }}
     >
         <div
@@ -17,7 +17,7 @@ const Header = ({siteTitle}) => (
                 padding: `1.45rem 1.0875rem`,
             }}
         >
-            <div style={{width: '3rem', height: 'auto'}}>
+            <div style={{width: '3rem', height: 'auto', display: 'flex'}}>
                 <img style={{margin: 0}} src={logo} alt='logo'/>
             </div>
             <div style={{paddingLeft: '0.8rem'}}>

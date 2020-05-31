@@ -8,13 +8,13 @@ const DeveloperCard = ({name, url, image}) => {
     return (
         <div className={style.card}>
             <div className={style.cardText}>
-                <h2>{name}</h2>
-                <p><a href={url}
+                <h3>{name}</h3>
+                <p><a href={url} rel="noreferrer"
                       target='_blank'>{url.replace('https://', '').replace('http://', '').replace('www.', '').replace(/\/$/, "")}</a>
                 </p>
             </div>
             <div className={style.cardImage}>
-                <a href={url} target='_blank'>
+                <a href={url} target='_blank' rel="noreferrer" >
 
                     {image ?
                         <Img
