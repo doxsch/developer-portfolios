@@ -1,0 +1,15 @@
+.card{
+    display: flex;
+    margin-bottom: 6rem;
+    flex-direction: column;
+}
+
+.card-text {
+    flex: 1;
+    text-align: center;
+}
+
+.card-image {
+    flex: 1;
+    box-shadow: 0 5px 9px 0 rgba(0, 0, 0, 0.1);
+}

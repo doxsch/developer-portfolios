@@ -1,0 +1,19 @@
+.letter-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+}
+.letter-circle {
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--primary-color);
+    color: white;
+}
+.letter-text {
+    font-size: 3rem;
+    line-height: 3rem;
+}
