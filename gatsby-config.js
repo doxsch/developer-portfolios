@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: '/developer-portfolios',
   siteMetadata: {
     title: `Developer Portfolios`,
     description: `On this page you will find a list of developer portfolios from which you can be inspired.`,
