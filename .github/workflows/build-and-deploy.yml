@@ -1,0 +1,35 @@
+name: Build and Deploy Gatsby Page
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: '10.x'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Install gatsby-cli
+        run: npm install -g gatsby-cli
+
+      - name: Format Code
+        run: npm run format
+
+      - name: Build
+        run: npm run build
+        
+      - name: Publish
+        uses: s0/git-publish-subdir-action@master
+        env:
+          REPO: self
+          BRANCH: gh-pages
+          FOLDER: public
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
