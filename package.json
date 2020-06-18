@@ -34,7 +34,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
-    "prepare-data": "curl https://raw.githubusercontent.com/emmabostian/developer-portfolios/master/README.md>portfolios.md && convert-portfolio.sh",
+    "prepare-data": "curl https://raw.githubusercontent.com/emmabostian/developer-portfolios/master/README.md>portfolios.md && ./convert-portfolio.sh",
     "type": "git",
     "url": "https://github.com/doxsch/developer-portfolios"
   },
