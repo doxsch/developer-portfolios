@@ -19,10 +19,10 @@ echo "Found $length names..."
 length=${#urls[@]}
 echo "Found $length urls..."
 
-[ -e sites.yaml ] && rm sites.yaml
-echo "# This file is created by a script, so do not edit it manually"> sites.yaml
+[ -e ./src/data/sites.yaml ] && rm ./src/data/sites.yaml
+echo "# This file is created by a script, so do not edit it manually"> ./src/data/sites.yaml
 for i in "${!names[@]}"
 do
-	echo "- url: ${urls[i]}">> sites.yaml
-    echo "  name: ${names[i]}">> sites.yaml
+	echo "- url: ${urls[i]}">> ./src/data/sites.yaml
+    echo "  name: ${names[i]}">> ./src/data/sites.yaml
 done

@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "developer-portfolios",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
-  "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "description": "A simple website on which you will find a list of developer portfolios from which you can be inspired",
+  "version": "0.0.1",
+  "author": "doxsch",
   "dependencies": {
     "gatsby": "^2.21.37",
     "gatsby-image": "^2.4.4",
@@ -25,7 +25,7 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
+  "license": "UNLICENSED",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
@@ -33,13 +33,12 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
-  },
-  "repository": {
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
+    "prepare-data": "curl https://raw.githubusercontent.com/emmabostian/developer-portfolios/master/README.md>portfolios.md && convert-portfolio.sh",
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/doxsch/developer-portfolios"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/doxsch/developer-portfolios/issues"
   }
 }
