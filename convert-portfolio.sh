@@ -20,6 +20,7 @@ length=${#urls[@]}
 echo "Found $length urls..."
 
 [ -e ./src/data/sites.yaml ] && rm ./src/data/sites.yaml
+touch ./src/data/sites.yaml
 echo "# This file is created by a script, so do not edit it manually"> ./src/data/sites.yaml
 for i in "${!names[@]}"
 do
