@@ -3,7 +3,8 @@
 IFS_backup=$IFS
 IFS=$'\n'
 
-
+pwd
+ls -alh
 # find name from portfolios.md
 names=($(grep '*' portfolios.md | awk -F"[" '{print $2}' | awk -F"]" '{print $1}'))
 
