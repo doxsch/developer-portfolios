@@ -23,7 +23,7 @@ const DeveloperCard = ({name, url, image}) => {
                             fadeIn={true}
 
                         /> :
-                        <DefaultImage/>
+                        <></>
                     }
 
                 </a>
