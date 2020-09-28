@@ -4,10 +4,10 @@ IFS_backup=$IFS
 IFS=$'\n'
 
 # find name from portfolios.md
-names=($(grep '*' portfolios.md | awk -F"[" '{print $2}' | awk -F"]" '{print $1}'))
+names=($(grep '^* \[' portfolios.md | awk -F"[" '{print $2}' | awk -F"]" '{print $1}'))
 
 # find urls
-urls=($(grep '*' portfolios.md | awk -F"(" '{print $2}' | awk -F")" '{print $1}'))
+urls=($(grep '^* \[' portfolios.md | awk -F"(" '{print $2}' | awk -F")" '{print $1}'))
 
 IFS=$IFS_backup
 
