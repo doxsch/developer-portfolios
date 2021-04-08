@@ -68,3 +68,7 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 /.idea/
+
+# Custom
+/portfolios.md
+/src/data/sites.yaml
