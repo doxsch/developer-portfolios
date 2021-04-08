@@ -5,7 +5,7 @@
   "version": "0.0.1",
   "author": "doxsch",
   "dependencies": {
-    "gatsby": "^2.21.37",
+    "gatsby": "^2.32.12",
     "gatsby-image": "^2.4.4",
     "gatsby-plugin-manifest": "^2.4.5",
     "gatsby-plugin-react-helmet": "^3.3.1",
