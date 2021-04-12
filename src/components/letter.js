@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import style from "./letter.module.css"
+import * as style from "./letter.module.css"
 
 const Letter = ({letter}) => {
     return (

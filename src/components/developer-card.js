@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { GatsbyImage } from "gatsby-plugin-image";
-import style from "./developer-card.module.css"
+import * as style from "./developer-card.module.css"
 
 const DeveloperCard = ({name, url, image}) => {
     return (
