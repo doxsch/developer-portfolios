@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Img from "gatsby-image"
+import { GatsbyImage } from "gatsby-plugin-image";
 import style from "./developer-card.module.css"
 
 const DeveloperCard = ({name, url, image}) => {
@@ -16,19 +16,14 @@ const DeveloperCard = ({name, url, image}) => {
                 <a href={url} target='_blank' rel="noreferrer" >
 
                     {image ?
-                        <Img
-                            fluid={image.fluid}
-                            alt={name}
-                            fadeIn={true}
-
-                        /> :
+                        <GatsbyImage image={image.gatsbyImageData} alt={name}  /> :
                         <></>
                     }
 
                 </a>
             </div>
         </div>
-    )
+    );
 };
 
 DeveloperCard.propTypes = {

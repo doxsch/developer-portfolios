@@ -7,27 +7,24 @@ import {graphql, useStaticQuery} from "gatsby";
 import Letter from "../components/letter";
 
 const IndexPage = () => {
-    const data = useStaticQuery(graphql`
-        query DevSiteQuery {
-            allSitesYaml {
-                edges {
-                    node {
-                        url
-                        name
-                        childScreenshot {
-                            screenshotFile {
-                                childImageSharp {
-                                    fluid(maxWidth: 700) {
-                                        ...GatsbyImageSharpFluid
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
+    const data = useStaticQuery(graphql`query DevSiteQuery {
+  allSitesYaml {
+    edges {
+      node {
+        url
+        name
+        childScreenshot {
+          screenshotFile {
+            childImageSharp {
+              gatsbyImageData(width: 700, layout: CONSTRAINED, placeholder: BLURRED)
             }
+          }
         }
-    `);
+      }
+    }
+  }
+}
+`);
     let tmpLetter = "";
 
     return (
