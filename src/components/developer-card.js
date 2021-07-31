@@ -13,13 +13,11 @@ const DeveloperCard = ({name, url, image}) => {
                 </p>
             </div>
             <div className={style.cardImage}>
-                <a href={url} target='_blank' rel="noreferrer" >
-
+                <a href={url} target='_blank' rel="noreferrer" style={{display: 'block'}}>
                     {image ?
-                        <GatsbyImage image={image.gatsbyImageData} alt={name}  /> :
+                        <GatsbyImage image={image.gatsbyImageData} alt={name} style={{display: 'block'}}/> :
                         <></>
                     }
-
                 </a>
             </div>
         </div>
