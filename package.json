@@ -12,7 +12,6 @@
     "gatsby-plugin-react-helmet": "^5.12.1",
     "gatsby-plugin-sharp": "^4.12.1",
     "gatsby-source-filesystem": "^4.12.1",
-    "gatsby-transformer-screenshot": "^4.12.1",
     "gatsby-transformer-sharp": "^4.12.1",
     "gatsby-transformer-yaml": "^4.12.1",
     "prop-types": "^15.8.1",
@@ -37,7 +36,8 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1",
     "prepare-data": "curl https://raw.githubusercontent.com/emmabostian/developer-portfolios/master/README.md>portfolios.md && chmod +x ./convert-portfolio.sh && ./convert-portfolio.sh",
     "type": "git",
-    "url": "https://github.com/doxsch/developer-portfolios"
+    "url": "https://github.com/doxsch/developer-portfolios",
+    "postinstall": "git clone --branch fix-gatsby-transformer-screenshot-fastq --filter=blob:none --no-checkout --depth 1 --sparse https://github.com/doxsch/gatsby.git gatsby && cd gatsby && git sparse-checkout init --cone && git sparse-checkout set packages/gatsby-transformer-screenshot && git checkout && cd .. && npm i ./gatsby/packages/gatsby-transformer-screenshot/"
   },
   "bugs": {
     "url": "https://github.com/doxsch/developer-portfolios/issues"
