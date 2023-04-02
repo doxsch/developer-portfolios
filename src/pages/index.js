@@ -1,7 +1,7 @@
 import React from "react"
 
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import DeveloperCard from "../components/developer-card";
 import {graphql, useStaticQuery} from "gatsby";
 import Letter from "../components/letter";
@@ -29,7 +29,7 @@ const IndexPage = () => {
 
     return (
         <Layout>
-            <SEO title="Home"/>
+            <Seo title="Home"/>
             <h2>Hi people</h2>
             <p>On this page you will find a list of developer portfolios from which you can be inspired. This page was
                 made possible by Emma Bostian, who provides this information in her <a
@@ -40,7 +40,7 @@ const IndexPage = () => {
                              target='_blank'>here</a>.</p>
             <p>Now get inspired and build something great.</p>
 
-            <h2>Today's featured portfolio</h2>
+            <h2>Featured portfolio</h2>
             {
                 [data.allSitesYaml.edges].map(edges => {
                     const numberOfPortfolios = edges.length - 1
@@ -51,7 +51,6 @@ const IndexPage = () => {
 
                     return (
                         <>
-                            <Letter key={'featured'} letter={selectedPortfolio.name[0].toUpperCase()}/>
                             <DeveloperCard
                                 key={'feat-' + selectedPortfolio.name}
                                 name={selectedPortfolio.name}
