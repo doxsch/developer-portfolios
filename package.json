@@ -6,7 +6,7 @@
   "author": "doxsch",
   "dependencies": {
     "better-queue": "^3.8.12",
-    "gatsby": "^5.8.1",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-image": "^3.8.0",
     "gatsby-plugin-manifest": "^5.8.0",
     "gatsby-plugin-sharp": "^5.8.1",
